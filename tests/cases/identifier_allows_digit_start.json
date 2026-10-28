@@ -1,0 +1,10 @@
+{
+  "description": "Matches a given counter-example: \\w+ allows 2fast.",
+  "format": "identifier",
+  "pattern": "\\w+",
+  "expect": {
+    "valid": false,
+    "score": 0.0,
+    "check": "fits-examples"
+  }
+}

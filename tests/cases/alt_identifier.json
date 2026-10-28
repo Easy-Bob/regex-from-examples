@@ -1,0 +1,10 @@
+{
+  "description": "A differently written but equivalent pattern: any correct regex passes.",
+  "format": "identifier",
+  "pattern": "[_a-zA-Z]\\w*",
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}

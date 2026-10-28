@@ -1,0 +1,10 @@
+{
+  "description": "The hidden target itself.",
+  "format": "slug",
+  "pattern": "[a-z0-9]+(?:-[a-z0-9]+)*",
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}

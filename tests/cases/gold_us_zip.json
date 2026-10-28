@@ -1,0 +1,10 @@
+{
+  "description": "The hidden target itself.",
+  "format": "us_zip",
+  "pattern": "[0-9]{5}(?:-[0-9]{4})?",
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Outside the dialect: a backreference.",
+  "format": "slug",
+  "pattern": "([a-z]+)\\1",
+  "expect": {
+    "valid": false,
+    "score": 0.0,
+    "check": "well-formed"
+  }
+}

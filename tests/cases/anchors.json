@@ -1,0 +1,10 @@
+{
+  "description": "Outside the dialect: ^ and $ anchors.",
+  "format": "us_zip",
+  "pattern": "^[0-9]{5}(-[0-9]{4})?$",
+  "expect": {
+    "valid": false,
+    "score": 0.0,
+    "check": "well-formed"
+  }
+}

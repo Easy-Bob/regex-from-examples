@@ -1,0 +1,10 @@
+{
+  "description": "A differently written but equivalent pattern: any correct regex passes.",
+  "format": "octet",
+  "pattern": "25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d",
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}

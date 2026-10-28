@@ -1,0 +1,10 @@
+{
+  "description": "A differently written but equivalent pattern: any correct regex passes.",
+  "format": "price",
+  "pattern": "(\\$|€)(0|[1-9]\\d*)(\\.\\d\\d)?",
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}

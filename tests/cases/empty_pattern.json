@@ -1,0 +1,10 @@
+{
+  "description": "An empty pattern matches only the empty string.",
+  "format": "slug",
+  "pattern": "",
+  "expect": {
+    "valid": false,
+    "score": 0.0,
+    "check": "fits-examples"
+  }
+}

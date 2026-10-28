@@ -1,0 +1,10 @@
+{
+  "description": "Near-miss: allows leading zeros such as 01.0.0.",
+  "format": "semver",
+  "pattern": "\\d+\\.\\d+\\.\\d+",
+  "expect": {
+    "valid": false,
+    "score": 0.865,
+    "check": "equivalent"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Near-miss: 3 to 6 digits, so it also allows 4 or 5.",
+  "format": "hex_color",
+  "pattern": "#[0-9a-fA-F]{3,6}",
+  "expect": {
+    "valid": false,
+    "score": 0.85,
+    "check": "equivalent"
+  }
+}

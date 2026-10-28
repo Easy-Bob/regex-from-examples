@@ -1,0 +1,39 @@
+_ > nanoagent.plugin.v0001.ManifestConfig:
+id: regex-from-examples
+name: Regex From Examples
+version: 0.1.0
+status: in-development
+spec: nanoagent.plugin/v0001
+
+runtime > nanoagent.plugin.v0001.RuntimeConfig:
+  type: mcp_stdio
+  command: [uv, run, --frozen, python, -m, plugin]
+
+permissions > nanoagent.plugin.v0001.PermissionsConfig:
+  network > nanoagent.plugin.v0001.NetworkConfig:
+    hosts: []
+  filesystem > nanoagent.plugin.v0001.FilesystemConfig:
+    write: [workspace]
+
+# One entry per contract.Tool; its input and output classes are contract.TOOLS's.
+tools > dict[contract.Tool, nanoagent.plugin.v0001.ToolConfig]:
+  pin_target:
+    description: Pin the write-regex task's answer key, a bundled format's hidden target pattern and its held-out strings
+  get_task:
+    description: Give a bundled format's exact description, example strings it allows and does not allow, and the longest pattern allowed
+  test_regex:
+    description: Test a pattern on the format's given examples, listing the examples it misses and the counter-examples it matches; a pattern outside the dialect is refused with the reason
+
+# One entry per contract.Task; its input class is contract.TASKS's.
+tasks > dict[contract.Task, nanoagent.plugin.v0001.TaskConfig]:
+  write-regex:
+    description: Write a regex that allows exactly the strings a bundled text format describes
+    runner: agent
+    tools: [get_task, test_regex]
+    reference: pin_target
+    instructions: |-
+      Goal. Write a regex that matches exactly the strings the format's description allows: every one of them, and nothing else. It is judged on all strings, not only the examples, so follow the description to the letter: number ranges (00 to 23, 0 to 255), leading zeros, how many digits, which parts are optional.
+      Matching. The pattern always has to match the whole string, as Python's re.fullmatch does, so never write ^ or $. \d is 0-9 only and \w is a-z, A-Z, 0-9 and _ only (like re.ASCII).
+      Dialect. Allowed: literal characters (escape . $ ( ) [ ] { } * + ? | \ when you mean them literally), . for any character but a newline, \d \D \w \W \s \S, classes like [0-9a-f] or [^,], groups (...) and (?:...), alternation |, and the quantifiers * + ? {n} {n,} {n,m} with counts up to 20. Not allowed: anchors (^ $ \b), lookarounds, backreferences, named groups, inline flags such as (?i), lazy quantifiers such as *?. At most 80 characters.
+      Plan. One tool call per step: (1) get_task; (2) write the pattern from the description and test_regex it; (3) fix anything it lists, check each edge the description names, and test_regex again; (4) submit.
+      Submit. The format as given and the pattern exactly as tested.

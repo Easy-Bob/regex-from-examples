@@ -1,0 +1,10 @@
+{
+  "description": "Near-miss: any 1 to 3 digits, so it allows 00 and 256.",
+  "format": "octet",
+  "pattern": "[0-9]{1,3}",
+  "expect": {
+    "valid": false,
+    "score": 0.8131,
+    "check": "equivalent"
+  }
+}

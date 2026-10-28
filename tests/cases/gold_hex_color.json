@@ -1,0 +1,10 @@
+{
+  "description": "The hidden target itself.",
+  "format": "hex_color",
+  "pattern": "#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})",
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}

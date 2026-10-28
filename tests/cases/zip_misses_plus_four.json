@@ -1,0 +1,10 @@
+{
+  "description": "Misses a given example: no +4 part, so 90210-1234 fails.",
+  "format": "us_zip",
+  "pattern": "[0-9]{5}",
+  "expect": {
+    "valid": false,
+    "score": 0.0,
+    "check": "fits-examples"
+  }
+}

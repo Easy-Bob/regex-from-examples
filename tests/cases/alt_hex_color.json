@@ -1,0 +1,10 @@
+{
+  "description": "A differently written but equivalent pattern: any correct regex passes.",
+  "format": "hex_color",
+  "pattern": "#[0-9A-Fa-f]{3}(?:[0-9A-Fa-f]{3})?",
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Near-miss: hours 00-29, so it allows 24:00.",
+  "format": "time24",
+  "pattern": "[0-2][0-9]:[0-5][0-9]",
+  "expect": {
+    "valid": false,
+    "score": 0.98,
+    "check": "equivalent"
+  }
+}

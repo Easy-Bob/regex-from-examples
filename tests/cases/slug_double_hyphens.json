@@ -1,0 +1,10 @@
+{
+  "description": "Near-miss: allows double hyphens such as a--b.",
+  "format": "slug",
+  "pattern": "[a-z0-9]+(?:-+[a-z0-9]+)*",
+  "expect": {
+    "valid": false,
+    "score": 0.9495,
+    "check": "equivalent"
+  }
+}

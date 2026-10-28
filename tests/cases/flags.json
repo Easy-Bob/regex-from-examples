@@ -1,0 +1,10 @@
+{
+  "description": "Outside the dialect: an inline flag.",
+  "format": "hex_color",
+  "pattern": "(?i)#(?:[0-9a-f]{3}|[0-9a-f]{6})",
+  "expect": {
+    "valid": false,
+    "score": 0.0,
+    "check": "well-formed"
+  }
+}

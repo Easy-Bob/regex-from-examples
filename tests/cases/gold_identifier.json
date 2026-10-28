@@ -1,0 +1,10 @@
+{
+  "description": "The hidden target itself.",
+  "format": "identifier",
+  "pattern": "[A-Za-z_][A-Za-z0-9_]*",
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}

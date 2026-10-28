@@ -1,0 +1,10 @@
+{
+  "description": "A differently written but equivalent pattern: any correct regex passes.",
+  "format": "time24",
+  "pattern": "[01]\\d:[0-5]\\d|2[0-3]:[0-5]\\d",
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}

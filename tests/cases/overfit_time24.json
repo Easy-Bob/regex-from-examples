@@ -1,0 +1,10 @@
+{
+  "description": "Overfitting: an alternation of the given examples fits them but nothing else.",
+  "format": "time24",
+  "pattern": "00:00|09:05|12:30|19:59|23:59|07:45",
+  "expect": {
+    "valid": false,
+    "score": 0.5,
+    "check": "equivalent"
+  }
+}
