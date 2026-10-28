@@ -1,6 +1,6 @@
 _ > nanoagent.plugin.v0001.ProductConfig:
 tagline: "Write a regex, proven exactly right or wrong"
-summary: "Pick a text format such as a 24-hour time, a hex colour or a number from 0 to 255. An agent writes a regex from its description and examples, and a verifier checks it against every possible string, naming the shortest one it gets wrong."
+summary: "Ask for a regex for one of eight formats - time24, hex_color, semver, us_zip, octet, identifier, slug or price. Example: 'Write a regex for the octet format.' An agent writes it from an exact description, and a verifier proves it matches exactly the right strings."
 highlights:
   - "Exact verdicts: any equivalent regex passes, however it is written"
   - "Each wrong regex comes with the shortest string it gets wrong"

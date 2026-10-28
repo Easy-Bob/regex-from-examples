@@ -1,7 +1,7 @@
 _ > nanoagent.plugin.v0001.ManifestConfig:
 id: regex-from-examples
 name: Regex From Examples
-version: 0.1.1
+version: 0.1.2
 status: ready
 spec: nanoagent.plugin/v0001
 
@@ -27,7 +27,7 @@ tools > dict[contract.Tool, nanoagent.plugin.v0001.ToolConfig]:
 # One entry per contract.Task; its input class is contract.TASKS's.
 tasks > dict[contract.Task, nanoagent.plugin.v0001.TaskConfig]:
   write-regex:
-    description: Write a regex that allows exactly the strings a bundled text format describes
+    description: Write a regex that allows exactly the strings one of the bundled formats describes (time24, hex_color, semver, us_zip, octet, identifier, slug or price), for example a regex for the octet format
     runner: agent
     tools: [get_task, test_regex]
     reference: pin_target
